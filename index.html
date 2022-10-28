@@ -5,8 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <script src="js/script.js"></script>
+
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-		
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/costume.css">
     <link rel="stylesheet" href="css/style.css">
@@ -51,21 +52,21 @@
                 Otkupna cena poljoprivrednika <input type="number" id="principal" input class="form-control" placeholder="Readonly input here...">  <br/>
 
                 <!--Visina marze magacina VP-->
-                Izaberi visinu VP marze <input class="form-control-range" type="range"  id="rate" min="1" max="100" value="20" step="0.25"
+                Izaberi visinu VP marze <input class="form-control-range" type="range"  id="rate" min="1" max="100" value="20" step="1"
                 onchange="updateRate()">  <br/>
 
                 <!--Visina selektovane VP marze-->
                 <span id="rate_val">
-                    10.25%
+                    20%
                 </span> <br/>
                           
                 <!--Visina MP marze-->
-                Izaberi visinu MP marze <input class="form-control-range" type="range"  id="rate" min="1" max="100" value="20" step="0.25"
-                onchange="updateRate()">  <br/>
+                Izaberi visinu MP marze <input class="form-control-range" type="range"  id="rateVp" min="0" max="5" value="0" step="1"
+                onchange="updateRateVp()">  <br/>
                 
                 <!--Visina selektovane marze-->
-                <span id="rate_val">
-                    10.25%
+                <span id="rate_valVp">
+                    0%
                 </span> <br/>
 
                 <!--Poreska stopa-->
