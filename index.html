@@ -48,14 +48,19 @@
 
           <h2>Poljoprivrednici</h2>
                 <!--Otkupna cena poljoprivrednika-->
-                Otkupna cena poljoprivrednika <input type="number" id="principal">  <br/>
+                Otkupna cena poljoprivrednika <input type="number" id="principal" input class="form-control" placeholder="Readonly input here...">  <br/>
 
                 <!--Visina marze magacina VP-->
-                Izaberi visinu VP marze <input type="range"  id="rate" min="1" max="100" value="20" step="0.25"
+                Izaberi visinu VP marze <input class="form-control-range" type="range"  id="rate" min="1" max="100" value="20" step="0.25"
                 onchange="updateRate()">  <br/>
+
+                <!--Visina selektovane VP marze-->
+                <span id="rate_val">
+                    10.25%
+                </span> <br/>
                           
                 <!--Visina MP marze-->
-                Izaberi visinu MP marze <input type="range"  id="rate" min="1" max="100" value="20" step="0.25"
+                Izaberi visinu MP marze <input class="form-control-range" type="range"  id="rate" min="1" max="100" value="20" step="0.25"
                 onchange="updateRate()">  <br/>
                 
                 <!--Visina selektovane marze-->
@@ -65,12 +70,12 @@
 
                 <!--Poreska stopa-->
                 Poreska stopa:
-                <select id="taxrate">
-                    <option value="1">10%</option>
+                <select id="taxrate" class="form-control">
+                    <option value="1" selected>10%</option>
                     <option value="2">20%</option>
                 </select> <br/>
 
-                <button onclick="compute()">Izracunaj</button> <br />
+                <button class="btn btn-primary" onclick="compute()">Izracunaj</button> <br />
                 <span id="result">
 
                 </span>
@@ -81,7 +86,7 @@
 
           <h2>Izracunaj mi MP cenu</h2>
                 <!--Amount-->
-                Amount <input type="number" id="principal">  <br/>
+                Amount <input class="form-control" type="number" id="principal" placeholder="Readonly input here...">  <br/>
                           
                 <!--Rate-->
                 Rate <input type="range"  id="rate" min="1" max="20" value="10.25" step="0.25"
@@ -113,7 +118,7 @@
         </div>
         <!-- End Modul MP cena -->
         <!-- Start Modul MP marza -->
-        <div class="jumbotron col-xl-12 col-md-push-3 collapse multi-collapse" id="module3">
+        <div class="jumbotron col-xl-12git  col-md-push-3 collapse multi-collapse" id="module3">
 
                   <h2>Izracunaj mi MP marzu</h2>
                         <!--Amount-->
