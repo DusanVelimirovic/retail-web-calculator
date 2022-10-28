@@ -52,34 +52,45 @@
                 Otkupna cena poljoprivrednika <input type="number" id="principal" input class="form-control" placeholder="Readonly input here...">  <br/>
 
                 <!--Visina marze magacina VP-->
-                Izaberi visinu VP marze <input class="form-control-range" type="range"  id="rate" min="1" max="100" value="20" step="1"
-                onchange="updateRate()">  <br/>
-
-                <!--Visina selektovane VP marze-->
-                <span id="rate_val">
-                    20%
-                </span> <br/>
-                          
-                <!--Visina MP marze-->
-                Izaberi visinu MP marze <input class="form-control-range" type="range"  id="rateVp" min="0" max="5" value="0" step="1"
+                Izaberi visinu VP marze <input class="form-control-range" type="range"  id="rateVp" min="0" max="5" value="0" step="1"
                 onchange="updateRateVp()">  <br/>
-                
-                <!--Visina selektovane marze-->
+        
                 <span id="rate_valVp">
                     0%
                 </span> <br/>
 
+                <!--Visina MP marze-->
+                Izaberi visinu MP marze <input class="form-control-range" type="range"  id="rate" min="1" max="100" value="20" step="1"
+                onchange="updateRate()">  <br/>
+
+                <span id="rate_val">
+                    20%
+                </span> <br/>
+                          
                 <!--Poreska stopa-->
                 Poreska stopa:
                 <select id="taxrate" class="form-control">
-                    <option value="1" selected>10%</option>
-                    <option value="2">20%</option>
+                    <option value="10">10%</option>
+                    <option value="20">20%</option>
                 </select> <br/>
 
                 <button class="btn btn-primary" onclick="compute()">Izracunaj</button> <br />
+                
                 <span id="result">
 
-                </span>
+                </span> </br>
+
+                <p>
+                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#showResults" aria-expanded="false" aria-controls="collapseExample">
+                    Prikazi vise
+                  </button>
+                </p>
+                <div class="collapse" id="showResults">
+                  <div class="card card-body">
+            
+                  </div>
+                </div>
+
         </div>
         <!-- End Modul Poljoprivrednici -->
         <!-- Start Modul MP cena -->
