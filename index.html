@@ -96,37 +96,35 @@
         <!-- Start Modul MP cena -->
         <div class="jumbotron col-xl-12 col-md-push-3 collapse multi-collapse" id="module2">
 
-          <h2>Izracunaj mi MP cenu</h2>
-                <!--Amount-->
-                Amount <input class="form-control" type="number" id="principal" placeholder="Readonly input here...">  <br/>
-                          
-                <!--Rate-->
-                Rate <input type="range"  id="rate" min="1" max="20" value="10.25" step="0.25"
-                onchange="updateRate()">  <br/>
-                
-                <!--Rate Val-->
-                <span id="rate_val">
-                    10.25%
+          <h2>Izracuna mi MP cenu</h2>
+                <!--VP cena sa PDV-->
+                VP cena sa PDV <input type="number" id="vpPdv" input class="form-control" placeholder="Readonly input here...">  <br/>
+
+                <!--Visina MP marze-->
+                Izaberi visinu MP marze <input class="form-control-range" type="range"  id="rateMp" min="1" max="100" value="20" step="1"
+                onchange="updateRateMp()">  <br/>
+
+                <span id="rate_valMP">
+                    20%
                 </span> <br/>
-
-                <!--Years-->
-                <select id="years">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
-
-                <button onclick="compute()">Compute Interest</button> <br />
+                          
+                <button class="btn btn-primary" onclick="computeMpPrice()">Izracunaj MP cenu</button> <br />
+                
                 <span id="result">
 
-                </span>
+                </span> </br>
+
+                <p>
+                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#showResultsMp" aria-expanded="false" aria-controls="collapseExample">
+                    Prikazi vise
+                  </button>
+                </p>
+                <div class="collapse" id="showResultsMp">
+                  <div class="card card-body">
+            
+                  </div>
+                </div>
+
         </div>
         <!-- End Modul MP cena -->
         <!-- Start Modul MP marza -->
