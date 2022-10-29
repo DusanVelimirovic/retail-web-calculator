@@ -1,7 +1,5 @@
 //costum logic for different retail calculator modules
 
-console.log("Hello World");
-
 //poljoprivednici module
 function compute()
 {
@@ -52,13 +50,46 @@ function compute()
        return true;
 }
 
-//display value selected on slider
-function updateRate() {
-    var rateval = document.getElementById("rate").value;
-    document.getElementById("rate_val").innerText=rateval + "%";
-}
+    //display value selected on slider
+    function updateRate() {
+        var rateval = document.getElementById("rate").value;
+        document.getElementById("rate_val").innerText=rateval + "%";
+    }
 
-function updateRateVp() {
-    var ratevalVp = document.getElementById("rateVp").value;
-    document.getElementById("rate_valVp").innerText=ratevalVp + "%";
-}
+    function updateRateVp() {
+        var ratevalVp = document.getElementById("rateVp").value;
+        document.getElementById("rate_valVp").innerText=ratevalVp + "%";
+    }
+
+//MP cena module
+
+    function computeMpPrice(){
+        //get VP price
+        var vpPrice = document.getElementById("vpPdv").value;
+        console.log(vpPrice);
+
+        //get rateMpMarza
+        var mpMarzaRate = document.getElementById("rateMp").value;
+        console.log(mpMarzaRate);
+
+        //get tax rate
+        var taxRateMp = document.getElementById("taxrateMp").value;
+        console.log(taxRateMp);
+
+        //calculate VP cenu bez PDV sa marzom
+        var p_decimal = 1 + (mpMarzaRate / 100);
+        var tax_decimal = 1 + (taxRateMp / 100);
+        var res = p_decimal * vpPrice * tax_decimal;
+
+            //show result za MP cenu
+        document.getElementById("resultMp").innerHTML="MP cena iznosi: <mark>"
+        +res+ " dinara" + "</mark>\<br\>";
+
+    }
+
+    //display value selected on slider
+    function updateRateMp(){
+        var rateValMp = document.getElementById("rateMp").value;
+        document.getElementById("rate_valMP").innerText=rateValMp + "%";
+
+    }

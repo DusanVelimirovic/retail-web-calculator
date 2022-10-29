@@ -96,9 +96,9 @@
         <!-- Start Modul MP cena -->
         <div class="jumbotron col-xl-12 col-md-push-3 collapse multi-collapse" id="module2">
 
-          <h2>Izracuna mi MP cenu</h2>
-                <!--VP cena sa PDV-->
-                VP cena sa PDV <input type="number" id="vpPdv" input class="form-control" placeholder="Readonly input here...">  <br/>
+          <h2>Izracunaj mi MP cenu</h2>
+                <!--VP cena bez PDV-->
+                VP cena bez PDV <input type="number" id="vpPdv" input class="form-control" placeholder="Readonly input here...">  <br/>
 
                 <!--Visina MP marze-->
                 Izaberi visinu MP marze <input class="form-control-range" type="range"  id="rateMp" min="1" max="100" value="20" step="1"
@@ -107,23 +107,19 @@
                 <span id="rate_valMP">
                     20%
                 </span> <br/>
+
+                <!--Poreska stopa-->
+                Poreska stopa:
+                <select id="taxrateMp" class="form-control">
+                    <option value="10">10%</option>
+                    <option value="20">20%</option>
+                </select> <br/>               
                           
                 <button class="btn btn-primary" onclick="computeMpPrice()">Izracunaj MP cenu</button> <br />
                 
-                <span id="result">
+                <span id="resultMp">
 
                 </span> </br>
-
-                <p>
-                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#showResultsMp" aria-expanded="false" aria-controls="collapseExample">
-                    Prikazi vise
-                  </button>
-                </p>
-                <div class="collapse" id="showResultsMp">
-                  <div class="card card-body">
-            
-                  </div>
-                </div>
 
         </div>
         <!-- End Modul MP cena -->
